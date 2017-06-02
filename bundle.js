@@ -81,14 +81,21 @@ module.exports = angular;
 "use strict";
 
 exports.__esModule = true;
-var MainCtrl = (function () {
-    function MainCtrl() {
-        this.something = "hello";
+var mainCtrl = (function () {
+    function mainCtrl() {
+        this.title = "qweqwewqe";
+        this.products = [];
     }
-    return MainCtrl;
+    mainCtrl.prototype.test = function () {
+        console.log('hooey');
+    };
+    return mainCtrl;
 }());
-MainCtrl.inject = [];
-exports["default"] = MainCtrl;
+exports["default"] = mainCtrl;
+var angular = __webpack_require__(0);
+angular
+    .module("myApp")
+    .controller("mainCtrl", mainCtrl);
 
 
 /***/ }),
@@ -33476,9 +33483,9 @@ $provide.value("$locale", {
 
 exports.__esModule = true;
 var angular = __webpack_require__(0);
-var app = angular.module('testApp', []);
+var app = angular.module("myApp", []);
 var mainCtrl_1 = __webpack_require__(1);
-app.controller('mainCtrl', mainCtrl_1["default"]);
+app.controller("mainCtrl", mainCtrl_1["default"]);
 
 
 /***/ })

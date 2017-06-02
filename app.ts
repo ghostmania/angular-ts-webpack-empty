@@ -1,7 +1,6 @@
 
 var angular = require('angular');
-var app = angular.module('testApp', []);
+var app = angular.module("myApp", []);
+import MainCtrl from './app/config/mainCtrl';
 
-import MainCtrl from './mainCtrl';
-
-app.controller('mainCtrl', MainCtrl)
+app.controller("mainCtrl", MainCtrl);
